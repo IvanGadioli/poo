@@ -20,7 +20,7 @@ Digite sua altura em metros: 1.85
 * Obesidade grau I: 30.0 ≤ IMC < 34.99
 * Obesidade grau II: 35.0 ≤ IMC < 39.99
 * Obesidade grau III: IMC ≥ 40.0
-5. O programa deve imprimir no console o resultado do cálculo e da classificação
+5. O programa deve imprimir no aconsole o resultado do cálculo e da classificação
 ```bash
 Seu IMC é: 23.37
 Classificação: Eutrófico

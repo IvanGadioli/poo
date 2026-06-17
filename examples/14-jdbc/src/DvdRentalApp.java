@@ -1,6 +1,7 @@
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -13,15 +14,19 @@ import java.util.Properties;
 public class DvdRentalApp {
 
     public static void main(String[] args) {
+        // declaracao de variavel do tipo Properties
         Properties props = new Properties();
 
-        try (var input = Files.newInputStream(Paths.get("db.properties"))) {
+
+        try (InputStream input = Files.newInputStream(Path.of("db.properties"))) {
+
             props.load(input);
         } catch (IOException e) {
             System.err.println("Erro ao carregar arquivo de configuração: " + e.getMessage());
             return;
         }
 
+        // Atribui o valor de cada linha ao que seria sua respectivas variaveis
         String url = props.getProperty("url");
         String user = props.getProperty("user");
         String password = props.getProperty("password");
@@ -89,7 +94,7 @@ public class DvdRentalApp {
             System.out.println("\nRollback executado. Categoria não foi salva.");
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Erro ao conectar no banco de dados: " + e);
         }
     }
 }

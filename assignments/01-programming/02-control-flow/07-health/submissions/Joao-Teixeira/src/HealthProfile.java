@@ -1,0 +1,99 @@
+import java.time.LocalDate;
+import java.time.Period;
+
+public class HealthProfile {
+    private String firstName;
+    private String lastName;
+    private char gender;
+    private int dayOfBirth;
+    private int monthOfBirth;
+    private int yearOfBirth;
+    private double heightInInches;
+    private double weightInPounds;
+
+    public HealthProfile(String firstName, String lastName, char gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, double heightInInches, double weightInPounds) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.dayOfBirth = dayOfBirth;
+        this.monthOfBirth = monthOfBirth;
+        this.yearOfBirth = yearOfBirth;
+        this.heightInInches = heightInInches;
+        this.weightInPounds = weightInPounds;
+    }
+
+    public String getFirstName() { return firstName; }
+    public void setFirstName(String firstName) { this.firstName = firstName; }
+
+    public String getLastName() { return lastName; }
+    public void setLastName(String lastName) { this.lastName = lastName; }
+
+    public char getGender() { return gender; }
+    public void setGender(char gender) { this.gender = gender; }
+
+    public int getDayOfBirth() { return dayOfBirth; }
+    public void setDayOfBirth(int dayOfBirth) { this.dayOfBirth = dayOfBirth; }
+
+    public int getMonthOfBirth() { return monthOfBirth; }
+    public void setMonthOfBirth(int monthOfBirth) { this.monthOfBirth = monthOfBirth; }
+
+    public int getYearOfBirth() { return yearOfBirth; }
+    public void setYearOfBirth(int yearOfBirth) { this.yearOfBirth = yearOfBirth; }
+
+    public double getHeightInInches() { return heightInInches; }
+    public void setHeightInInches(double heightInInches) { this.heightInInches = heightInInches; }
+
+    public double getWeightInPounds() { return weightInPounds; }
+    public void setWeightInPounds(double weightInPounds) { this.weightInPounds = weightInPounds; }
+
+    public int calculateAge(int currentYear) {
+        LocalDate birthDate = LocalDate.of(yearOfBirth, monthOfBirth, dayOfBirth);
+        LocalDate evalDate = LocalDate.of(currentYear, 1, 1);
+        return Period.between(birthDate, evalDate).getYears();
+    }
+
+    public int calculateMaxHeartRate() {
+        return 220 - calculateAge(2025);
+    }
+
+    public String calculateTargetHeartRate() {
+        int maxRate = calculateMaxHeartRate();
+        int minTarget = (int) (maxRate * 0.50);
+        int maxTarget = (int) (maxRate * 0.85);
+        return minTarget + " bpm - " + maxTarget + " bpm";
+    }
+
+    public double calculateBMI() {
+        return (weightInPounds * 703) / (heightInInches * heightInInches);
+    }
+
+    public static void main(String[] args) {
+        java.util.Scanner input = new java.util.Scanner(System.in);
+        System.out.print("Digite seu primeiro nome: ");
+        String name = input.next();
+        System.out.print("Digite seu sobrenome: ");
+        String lastName = input.next();
+        System.out.print("Digite seu gênero (M/F): ");
+        char gender = input.next().charAt(0);
+        System.out.print("Digite sua data de nascimento (dia, mês e ano separados por espaço): ");
+        int day = input.nextInt();
+        int month = input.nextInt();
+        int year = input.nextInt();
+        System.out.print("Digite sua altura em polegadas: ");
+        double height = input.nextDouble();
+        System.out.print("Digite seu peso em libras: ");
+        double weight = input.nextDouble();
+
+        HealthProfile hp = new HealthProfile(name, lastName, gender, day, month, year, height, weight);
+
+        System.out.println("Nome: " + hp.getFirstName() + " " + hp.getLastName());
+        System.out.println("Gênero: " + (hp.getGender() == 'M' || hp.getGender() == 'm' ? "Masculino" : "Feminino"));
+        System.out.println("Data de nascimento: " + hp.getDayOfBirth() + "/" + hp.getMonthOfBirth() + "/" + hp.getYearOfBirth());
+        System.out.println("Idade: " + hp.calculateAge(2025) + " anos");
+        System.out.println("Altura: " + (int)hp.getHeightInInches() + " polegadas");
+        System.out.println("Peso: " + (int)hp.getWeightInPounds() + " libras");
+        System.out.printf("Índice de Massa Corporal (BMI): %.1f\n", hp.calculateBMI());
+        System.out.println("Frequência cardíaca máxima: " + hp.calculateMaxHeartRate() + " bpm");
+        System.out.println("Faixa de frequência cardíaca alvo: " + hp.calculateTargetHeartRate());
+    }
+}

@@ -13,7 +13,7 @@ public class IfElse {
             season = "Autumn";
         else
             season = "Bogus Month";
-
+    // System.out.printf("April is in %s", "season"); para formatação de string
         System.out.println("April is in the " + season + ".");
     }
 }
