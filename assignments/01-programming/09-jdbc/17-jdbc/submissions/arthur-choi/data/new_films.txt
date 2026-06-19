@@ -1,0 +1,51 @@
+title;language_id;rent_duration;rental_rate;replacement_cost
+Cidade de Deus;3;5;3.99;24.99
+Tropa de Elite;3;4;2.99;22.99
+Central do Brasil;3;6;3.49;25.99
+Bacurau;3;5;4.49;27.99
+Carandiru;3;6;3.99;26.99
+O Auto da Compadecida;3;4;2.49;21.99
+Que Horas Ela Volta;3;5;3.49;23.99
+Aquarius;3;7;4.49;28.99
+Bicho de Sete Cabecas;3;6;3.49;24.49
+Estomago;3;4;2.99;20.99
+Hoje Eu Quero Voltar Sozinho;3;5;2.99;22.49
+Ensaio Sobre a Cegueira;3;6;4.49;29.99
+O Homem do Futuro;3;4;3.49;23.49
+O Palhaco;3;3;2.49;19.99
+Dois Coelhos;3;5;3.99;24.49
+Se Eu Fosse Voce;3;4;2.99;21.49
+Cidade Baixa;3;6;3.49;24.99
+Linha de Passe;3;5;3.49;23.49
+Gonzaga de Pai para Filho;3;7;3.99;26.49
+Faroeste Caboclo;3;5;3.49;24.49
+Meu Nome Nao E Johnny;3;4;3.49;22.99
+Tropa de Elite 2;3;5;4.49;28.49
+Olga;3;6;3.49;23.99
+Casa de Areia;3;6;3.99;25.49
+Mutum;3;4;2.99;20.49
+Praia do Futuro;3;7;4.49;27.49
+O Ano Que Meus Pais Sairam de Ferias;3;6;3.99;26.99
+O Som ao Redor;3;5;3.49;23.99
+Lixo Extraordinario;3;4;2.49;19.99
+Terra Estrangeira;3;5;3.49;22.99
+Que Bom Te Ver Viva;3;4;2.99;21.99
+Cabra Marcado para Morrer;3;6;3.49;24.49
+Madame Sata;3;5;3.49;23.49
+Chega de Saudade;3;4;2.99;21.49
+Besouro;3;5;3.49;23.99
+O Beijo da Mulher Aranha;3;6;3.99;25.99
+A Onda da Vida;3;4;2.49;20.49
+O Escaravelho do Diabo;3;5;3.49;22.49
+Deus e o Diabo na Terra do Sol;3;7;4.99;29.99
+Bye Bye Brasil;3;5;3.49;23.49
+Os Inconfidentes;3;6;3.49;24.99
+Macunaima;3;4;2.99;21.49
+Pixote;3;5;3.49;23.49
+O Quatrilho;3;6;3.99;25.49
+Carlota Joaquina Princesa do Brazil;3;4;2.49;20.99
+Os Normais O Filme;3;4;2.99;21.99
+Lisbela e o Prisioneiro;3;5;3.49;22.99
+Boleiros Era Uma Vez o Futebol;3;5;3.49;23.49
+Pequeno Dicionario Amoroso;3;4;2.99;21.49
+Os 12 Trabalhos;3;5;3.49;22.49
