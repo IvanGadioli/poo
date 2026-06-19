@@ -63,8 +63,8 @@ Id,Nome,Sobrenome
 
 ```bash
 cd assignments/07-exams/2026.1-2-actor-export/submissions/<seu-diretorio>
-mkdir -p lib
-curl -L -o lib/postgresql-42.7.8.jar https://jdbc.postgresql.org/download/postgresql-42.7.8.jar
+mkdir -p libjar
+curl -L -o lib/postgresql-42.7.8.jar https://jdbc.postgresql.org/download/postgresql-42.7.8.
 javac -d bin src/*.java
 java -cp "bin:lib/postgresql-42.7.8.jar" ActorExportApp
 ```
